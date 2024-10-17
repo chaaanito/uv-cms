@@ -1,11 +1,15 @@
 <script>
   import { pb } from "../main";
   import { fade } from 'svelte/transition'
+  
+
 
 let types = ['Accounting','Teacher','Admin']
+
+
 </script>
 
-<div class="concern-form shadow" in:fade>
+<div class="concern-form shadow row g-3" in:fade>
     <h1>+ Concern</h1>
     <div class="col-md-6 mb-3">
         <label for="type" class="form-label">Concern Type</label>
@@ -15,10 +19,11 @@ let types = ['Accounting','Teacher','Admin']
           {/each}
         </select>
       </div>
-      <div class="col-md-12 mb-3">
-        <label for="concern" class="form-label">Concern Details</label>
-        <textarea class="form-control" id="concern" rows="10"></textarea>
+      <div class="col-md-6 mb-3">
+        <label for="department" class="form-label">Department</label>
+        <input type="text" class="form-control" id="department" disabled>
       </div>
+      <div id="editor"></div>
       <button class="btn btn-dark btn-sm">Submit</button>
 </div>
 
@@ -33,5 +38,9 @@ let types = ['Accounting','Teacher','Admin']
         margin: 0 auto;
         border-radius: 20px;
         margin-top: 10px;
+    }
+
+    #editor {
+        border: 1px solid;
     }
 </style>
