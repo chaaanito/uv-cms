@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    font-family: "Outfit" , sans-serif;
+    font-weight: 500;
+}
