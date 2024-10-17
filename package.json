@@ -18,6 +18,7 @@
     "gridjs": "^6.2.0",
     "gridjs-svelte": "^2.1.1",
     "pocketbase": "^0.21.5",
+    "quill": "^2.0.2",
     "svelte-spa-router": "^4.0.1"
   }
 }

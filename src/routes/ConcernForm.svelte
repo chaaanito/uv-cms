@@ -1,10 +1,28 @@
 <script>
   import { pb } from "../main";
   import { fade } from 'svelte/transition'
+  import Quill from 'quill';
+  import { onMount } from "svelte";
   
 
 
 let types = ['Accounting','Teacher','Admin']
+
+
+
+onMount(() => {
+    
+    const options = {
+        modules: {
+            toolbar: true,
+        },
+        placeholder: 'Your concern details...',
+        theme: 'snow'
+        };
+
+    const quill = new Quill('#editor', options)
+})
+
 
 
 </script>
@@ -23,6 +41,8 @@ let types = ['Accounting','Teacher','Admin']
         <label for="department" class="form-label">Department</label>
         <input type="text" class="form-control" id="department" disabled>
       </div>
+      
+      <div id="toolbar"></div>
       <div id="editor"></div>
       <button class="btn btn-dark btn-sm">Submit</button>
 </div>
