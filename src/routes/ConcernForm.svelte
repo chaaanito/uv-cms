@@ -4,14 +4,19 @@
   import Quill from 'quill';
   import { onMount } from "svelte";
   
-
+let user_data = JSON.parse(localStorage.getItem('user_data'))
 
 let types = ['Accounting','Teacher','Admin']
+
+let department = ''
+let type = ''
+let status = ''
+let editor = {}
 
 
 
 onMount(() => {
-    
+
     const options = {
         modules: {
             toolbar: true,
@@ -21,8 +26,29 @@ onMount(() => {
         };
 
     const quill = new Quill('#editor', options)
+
 })
 
+async function save() {
+    
+    editor = quill.getContents();
+
+    const data = {
+            "user": user_data.record.id,
+            "department": department,
+            "type": type,
+            "editor": text,
+        }
+
+    try {
+
+    const record = await pb.collection('concerns').create(data);
+
+    }catch(e) {
+        status = e.message
+    }
+
+}
 
 
 </script>
@@ -39,15 +65,20 @@ onMount(() => {
       </div>
       <div class="col-md-6 mb-3">
         <label for="department" class="form-label">Department</label>
-        <input type="text" class="form-control" id="department" disabled>
+        <input type="text" class="form-control" id="department" disabled bind:value={user_data.record.department}>
       </div>
       
       <div id="toolbar"></div>
       <div id="editor"></div>
-      <button class="btn btn-dark btn-sm">Submit</button>
+      <br>
+      <div class="status">{status}</div>
+      <br>
+      <button class="btn btn-dark btn-sm" on:click={save}>Submit</button>
 </div>
 
 <style>
+
+
     h1 {
         text-align: right;
     }

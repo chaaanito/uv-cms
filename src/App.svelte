@@ -15,7 +15,7 @@
 
   let student_routes = {
     '/' : Dashboard,
-    '/addConcern' : ConcernForm,
+    '/addConcern/' : ConcernForm,
     '*' : NotFound
   }
 
