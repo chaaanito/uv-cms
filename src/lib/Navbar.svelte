@@ -21,7 +21,7 @@ let logout = () => {
             <a class="nav-link active" aria-current="page" href="#/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#/">Link</a>
+            <a class="nav-link" href="#/addConcern">+ Concern</a>
           </li>
         </ul>
           <button class="btn btn-dark shadow btn-sm" on:click={logout}>Logout</button>

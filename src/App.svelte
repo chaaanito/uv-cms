@@ -5,6 +5,7 @@
   import NotFound from "./routes/NotFound.svelte";
   import Navbar from "./lib/Navbar.svelte";
   import Login from "./lib/Login.svelte";
+  import ConcernForm from "./routes/ConcernForm.svelte";
 
 
   let admin_routes = {
@@ -14,6 +15,7 @@
 
   let student_routes = {
     '/' : Dashboard,
+    '/addConcern' : ConcernForm,
     '*' : NotFound
   }
 
