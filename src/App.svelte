@@ -6,10 +6,7 @@
   import Navbar from "./lib/Navbar.svelte";
   import Login from "./lib/Login.svelte";
   import ConcernForm from "./routes/ConcernForm.svelte";
-<<<<<<< HEAD
-=======
   import View from "./routes/View.svelte";
->>>>>>> 1d15e10 (update)
 
 
   let admin_routes = {
@@ -20,10 +17,7 @@
   let student_routes = {
     '/' : Dashboard,
     '/addConcern/' : ConcernForm,
-<<<<<<< HEAD
-=======
     '/View/:id' : View,
->>>>>>> 1d15e10 (update)
     '*' : NotFound
   }
 
