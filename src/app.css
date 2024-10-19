@@ -6,4 +6,15 @@
 body {
     font-family: "Outfit" , sans-serif;
     font-weight: 500;
+<<<<<<< HEAD
+=======
+}
+
+td , th{
+    text-align: center;
+}
+
+.card-text p {
+    margin-bottom: 0;
+>>>>>>> 1d15e10 (update)
 }
