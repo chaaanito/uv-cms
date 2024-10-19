@@ -7,10 +7,14 @@
   import Login from "./lib/Login.svelte";
   import ConcernForm from "./routes/ConcernForm.svelte";
   import View from "./routes/View.svelte";
+    import NavAdmin from "./lib/NavAdmin.svelte";
+    import DashAdmin from "./routes/DashAdmin.svelte";
+    import ViewAdmin from "./routes/ViewAdmin.svelte";
 
 
   let admin_routes = {
-    '/' : Dashboard,
+    '/' : DashAdmin,
+    '/View/:id' : ViewAdmin,
     '*' : NotFound
   }
 
@@ -27,7 +31,7 @@
 
 {#if pb.authStore.isValid}
      {#if user_data.record.type === 'admin'}
-      <Navbar/>
+      <NavAdmin/>
       <Router routes = {admin_routes}/>
      {/if}
      {#if user_data.record.type === 'student'}
