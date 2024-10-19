@@ -1,6 +1,5 @@
 UV CMS Thesis.
 
-<<<<<<< HEAD
 1. download ang repo
 2. extract sa imo pc
 3. open ka sa folder sa files
@@ -17,9 +16,6 @@ UV CMS Thesis.
 
 
 git commands
-=======
-
->>>>>>> 1d15e10 (update)
 …or create a new repository on the command line
 echo "# uv-cms" >> README.md
 git init
@@ -33,8 +29,4 @@ git push -u origin main
 
 git remote add origin https://github.com/chaaanito/uv-cms.git
 git branch -M main
-<<<<<<< HEAD
 git push -u origin main
-=======
-git push -u origin main
->>>>>>> 1d15e10 (update)

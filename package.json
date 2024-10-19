@@ -16,10 +16,6 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "gridjs": "^6.2.0",
-<<<<<<< HEAD
-    "gridjs-svelte": "^2.1.1",
-=======
->>>>>>> 1d15e10 (update)
     "pocketbase": "^0.21.5",
     "quill": "^2.0.2",
     "svelte-spa-router": "^4.0.1"
